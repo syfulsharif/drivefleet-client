@@ -105,7 +105,7 @@ export default function AddCarPage() {
     setDailyRent("220");
     setImage("https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&q=80&w=1200");
     setSeats("2");
-    setPickupLocation("Miami, FL");
+    setPickupLocation("Gulshan, Dhaka");
     setDescription("The ultimate automotive luxury statement. Features an incredibly athletic Vantage layout, AMG-sourced twin-turbo V8 engine producing 503 HP, and track-ready carbon composite braking.");
     setTransmission("Paddle Auto");
     setFuelType("Petrol");
@@ -197,7 +197,7 @@ export default function AddCarPage() {
 
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 dark:text-zinc-300">Daily Flat Rent ($)</label>
+                  <label className="block text-sm font-semibold text-gray-700 dark:text-zinc-300">Daily Flat Rent (BDT)</label>
                   <div className="relative mt-1.5">
                     <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                       <DollarSign className="h-4 w-4 text-gray-400" />

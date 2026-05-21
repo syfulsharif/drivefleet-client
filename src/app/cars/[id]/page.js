@@ -191,7 +191,7 @@ export default function CarDetailsPage({ params: paramsPromise }) {
             <div className="flex justify-between items-baseline">
               <span className="text-sm font-semibold text-gray-400">Daily Flat Rate</span>
               <p className="text-4xl font-black text-indigo-600 dark:text-indigo-400 tracking-tight">
-                ${car.dailyRent}
+                BDT {car.dailyRent}
                 <span className="text-sm font-semibold text-gray-500 dark:text-zinc-500">/day</span>
               </p>
             </div>
@@ -322,7 +322,7 @@ export default function CarDetailsPage({ params: paramsPromise }) {
                   
                   <div className="flex justify-between items-center text-xs">
                     <span className="text-gray-500">Daily Flat Rent</span>
-                    <span className="font-bold text-gray-700 dark:text-zinc-200">${car.dailyRent}</span>
+                    <span className="font-bold text-gray-700 dark:text-zinc-200">BDT {car.dailyRent}</span>
                   </div>
                   
                   <div className="flex justify-between items-center text-xs">
@@ -335,7 +335,7 @@ export default function CarDetailsPage({ params: paramsPromise }) {
                   <div className="flex justify-between items-baseline">
                     <span className="text-sm font-bold text-gray-900 dark:text-white">Estimated Total</span>
                     <span className="text-2xl font-black text-indigo-600 dark:text-indigo-400 tracking-tight">
-                      ${totalPrice}
+                      BDT {totalPrice}
                     </span>
                   </div>
                 </div>

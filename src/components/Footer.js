@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-2 group w-fit">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 text-white shadow-lg shadow-indigo-500/20">
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-r from-indigo-600 to-violet-500 text-white shadow-lg shadow-indigo-500/20">
                 <Car className="h-5 w-5" />
               </div>
               <span className="text-xl font-extrabold tracking-tight text-white">
@@ -47,11 +47,11 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center gap-2">
                 <MapPin className="h-4 w-4 text-indigo-400 shrink-0" />
-                <span>100 Biscayne Blvd, Miami, FL 33132</span>
+                <span>52, Gulshan Avenue, Dhaka-1000</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 text-indigo-400 shrink-0" />
-                <span>+1 (800) 555-0199</span>
+                <span>+880 1722 456 789</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-indigo-400 shrink-0" />

@@ -233,7 +233,7 @@ export default function ExploreCarsPage() {
                     <div>
                       <span className="text-sm text-gray-400 dark:text-zinc-500 font-semibold">Daily Rent</span>
                       <p className="text-2xl font-black text-indigo-600 dark:text-indigo-400 tracking-tight">
-                        ${car.dailyRent}
+                        BDT {car.dailyRent}
                         <span className="text-sm font-semibold text-gray-500 dark:text-zinc-500">/day</span>
                       </p>
                     </div>

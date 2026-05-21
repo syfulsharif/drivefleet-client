@@ -221,7 +221,7 @@ export default function MyAddedCarsPage() {
                     <div>
                       <span className="text-xs text-gray-400 dark:text-zinc-500 font-semibold">Price per Day</span>
                       <p className="text-2xl font-black text-indigo-600 dark:text-indigo-400 tracking-tight">
-                        ${car.dailyRent}
+                        BDT {car.dailyRent}
                       </p>
                     </div>
 
@@ -304,7 +304,7 @@ export default function MyAddedCarsPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-gray-500 dark:text-zinc-400 uppercase tracking-wider">Daily Flat Rent ($)</label>
+                    <label className="block text-xs font-bold text-gray-500 dark:text-zinc-400 uppercase tracking-wider">Daily Flat Rent (BDT)</label>
                     <input
                       type="number"
                       required

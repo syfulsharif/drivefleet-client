@@ -249,26 +249,53 @@ export function AuthProvider({ children }) {
     }
   };
 
-  const googleSignIn = async () => {
-    // Mock Google Sign In - simulates successful login without backend
-    const mockUser = {
-      id: "google_" + Date.now(),
-      name: "Alex Mercer",
-      email: "alex.mercer@gmail.com",
-      photoUrl: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=150",
-      googleUser: true,
+  const googleSignIn = async (userData = null) => {
+    // If no userData provided, use mock data (simulates Google OAuth flow)
+    const googleUser = userData || {
+      name: "Google User",
+      email: "user@gmail.com",
+      photoUrl: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&q=80&w=150"
     };
 
-    const mockToken = "mock_google_token_" + Date.now();
+    try {
+      const response = await fetch(`${API_URL}/auth/jwt`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: googleUser.email,
+          name: googleUser.name,
+          photoUrl: googleUser.photoUrl
+        }),
+      });
 
-    setUser(mockUser);
-    saveSession(mockUser, mockToken);
-    
-    await fetchBookings(mockToken);
-    await fetchCars();
+      const data = await response.json();
 
-    showToast("Successfully signed in with Google!", "success");
-    return true;
+      if (!data.success) {
+        showToast(data.message || "Google sign in failed", "error");
+        return false;
+      }
+
+      const userData2 = {
+        id: data.user.id || data.user._id,
+        name: data.user.name,
+        email: data.user.email,
+        photoUrl: data.user.photoUrl || "",
+        googleUser: true,
+      };
+
+      setUser(userData2);
+      saveSession(userData2, data.token);
+      
+      await fetchBookings(data.token);
+      await fetchCars();
+
+      showToast("Successfully signed in with Google!", "success");
+      return true;
+    } catch (error) {
+      console.error("Google sign in error:", error);
+      showToast("Google sign in failed. Please try again.", "error");
+      return false;
+    }
   };
 
   const logout = async () => {

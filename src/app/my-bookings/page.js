@@ -157,7 +157,7 @@ export default function MyBookingsPage() {
                               {booking.carName}
                             </span>
                             <span className="text-xs text-gray-400 dark:text-zinc-500 font-semibold mt-0.5 block">
-                              ${booking.dailyRent}/day
+                              BDT {booking.dailyRent}/day
                             </span>
                           </div>
                         </div>
@@ -237,7 +237,7 @@ export default function MyBookingsPage() {
                     />
                     <div className="min-w-0">
                       <h4 className="font-bold text-gray-900 dark:text-white truncate">{booking.carName}</h4>
-                      <p className="text-xs text-gray-400 dark:text-zinc-500 font-semibold mt-0.5">${booking.dailyRent}/day</p>
+                      <p className="text-xs text-gray-400 dark:text-zinc-500 font-semibold mt-0.5">BDT {booking.dailyRent}/day</p>
                       
                       <div className="mt-2">
                         <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-bold text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 shadow-xs">
